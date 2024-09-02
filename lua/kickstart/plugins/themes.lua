@@ -9,6 +9,17 @@ return {
     end,
   },
 
+  --Dracula
+  --[[
+  { "Mofiqul/dracula.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "dracula",
+    },
+  },
+  
+  --]]
   -- gruvbox
   --[[{
     'npxbr/gruvbox.nvim',
