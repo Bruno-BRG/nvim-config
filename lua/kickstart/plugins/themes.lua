@@ -1,5 +1,5 @@
 return {
-
+  --[[
   {
     'zootedb0t/citruszest.nvim',
     lazy = false,
@@ -8,6 +8,7 @@ return {
       vim.cmd 'colorscheme citruszest'
     end,
   },
+  --]]
 
   --Dracula
   --[[
@@ -51,7 +52,8 @@ return {
     end,
   },--]]
 
-  --[[ 'folke/tokyonight.nvim',
+  -- 'folke/tokyonight.nvim',
+  --[[ 
   {
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -59,6 +61,15 @@ return {
       vim.cmd.colorscheme 'tokyonight-night'
       vim.cmd.hi 'Comment gui=none'
     end,
-  },--]]
+  },
+  --]]
+  {
+    'EdenEast/nightfox.nvim',
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'nordfox'
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
 }
 -- vim: ts=2 sts=2 sw=2 et
