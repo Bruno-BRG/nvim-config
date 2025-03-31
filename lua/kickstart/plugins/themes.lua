@@ -63,12 +63,43 @@ return {
     end,
   },
   --]]
+  --[[
   {
     'EdenEast/nightfox.nvim',
     priority = 1000,
     init = function()
       vim.cmd.colorscheme 'nordfox'
       vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+  --]]
+  --[[
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    config = function()
+      vim.cmd 'colorscheme rose-pine'
+    end,
+  },
+  --]]
+
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    opts = {
+      variant = 'main',
+      dark_variant = 'main',
+      styles = {
+        transparency = false,
+      },
+    },
+    config = function(_, opts)
+      require('rose-pine').setup(opts)
+      vim.cmd.colorscheme 'rose-pine'
+      -- Set only the background to pure black
+      vim.cmd([[highlight Normal guibg=#000000]])
+      vim.cmd([[highlight NormalFloat guibg=#000000]])
+      vim.cmd([[highlight NormalNC guibg=#000000]])
     end,
   },
 }
